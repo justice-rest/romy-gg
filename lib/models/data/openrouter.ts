@@ -66,7 +66,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("anthropic/claude-sonnet-4"),
@@ -103,7 +103,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("anthropic/claude-3.7-sonnet:thinking"),
@@ -140,7 +140,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("google/gemini-2.5-pro-preview"),
@@ -177,7 +177,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("openai/gpt-4.1"),
@@ -214,7 +214,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("openai/o4-mini"),
@@ -251,7 +251,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("x-ai/grok-3-mini-beta"),
@@ -288,7 +288,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("google/gemini-2.5-flash-preview-05-20"),
@@ -325,7 +325,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("meta-llama/llama-3.3-8b-instruct:free"),
@@ -362,7 +362,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("openai/gpt-4.1-mini"),
@@ -399,7 +399,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("openai/gpt-4.1-nano"),
@@ -435,7 +435,7 @@ export const openrouterModels: ModelConfig[] = [
       createOpenRouter({
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
-          plugins: [{ id: "web", max_results: 3 }],
+          plugins: [{ id: "web", engine: "exa", max_results: 25 }],
         }),
       }).chat("openai/o3-mini"),
   },
@@ -470,7 +470,7 @@ export const openrouterModels: ModelConfig[] = [
       createOpenRouter({
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
-          plugins: [{ id: "web", max_results: 3 }],
+          plugins: [{ id: "web", engine: "exa", max_results: 25 }],
         }),
       }).chat("anthropic/claude-3.5-sonnet"),
   },
@@ -505,7 +505,7 @@ export const openrouterModels: ModelConfig[] = [
       createOpenRouter({
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
-          plugins: [{ id: "web", max_results: 3 }],
+          plugins: [{ id: "web", engine: "exa", max_results: 25 }],
         }),
       }).chat("google/gemini-2.0-flash-001"),
   },
@@ -540,7 +540,7 @@ export const openrouterModels: ModelConfig[] = [
       createOpenRouter({
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
-          plugins: [{ id: "web", max_results: 3 }],
+          plugins: [{ id: "web", engine: "exa", max_results: 25 }],
         }),
       }).chat("google/gemini-2.0-flash-lite-001"),
   },
@@ -575,7 +575,7 @@ export const openrouterModels: ModelConfig[] = [
       createOpenRouter({
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
-          plugins: [{ id: "web", max_results: 3 }],
+          plugins: [{ id: "web", engine: "exa", max_results: 25 }],
         }),
       }).chat("openai/gpt-4.5-preview"),
   },
@@ -610,7 +610,7 @@ export const openrouterModels: ModelConfig[] = [
       createOpenRouter({
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
-          plugins: [{ id: "web", max_results: 3 }],
+          plugins: [{ id: "web", engine: "exa", max_results: 25 }],
         }),
       }).chat("perplexity/sonar"),
   },
@@ -646,7 +646,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("perplexity/sonar-reasoning"),
@@ -683,7 +683,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("perplexity/sonar-reasoning-pro"),
@@ -720,7 +720,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("perplexity/sonar-pro"),
@@ -757,7 +757,7 @@ export const openrouterModels: ModelConfig[] = [
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
         ...(opts?.enableSearch && {
           extraBody: {
-            plugins: [{ id: "web", max_results: 3 }],
+            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
           },
         }),
       }).chat("perplexity/sonar-deep-research"),
