@@ -1,5 +1,5 @@
 services:
-  zola:
+  romy:
     build:
       context: .
       dockerfile: Dockerfile
