@@ -144,6 +144,7 @@ export function useChatCore({
   // Submit action
   const submit = useCallback(async () => {
     setIsSubmitting(true)
+    hasSentFirstMessageRef.current = true
 
     const uid = await getOrCreateGuestUserId(user)
     if (!uid) {
@@ -279,6 +280,8 @@ export function useChatCore({
         return
       }
 
+      hasSentFirstMessageRef.current = true
+
       // Find edited message
       const editIndex = messages.findIndex(
         (m) => String(m.id) === String(messageId)
@@ -411,6 +414,7 @@ export function useChatCore({
   const handleSuggestion = useCallback(
     async (suggestion: string) => {
       setIsSubmitting(true)
+      hasSentFirstMessageRef.current = true
       const optimisticId = `optimistic-${Date.now().toString()}`
       const optimisticMessage = {
         id: optimisticId,

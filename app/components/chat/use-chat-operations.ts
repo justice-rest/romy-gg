@@ -88,9 +88,12 @@ export function useChatOperations({
       )
 
       if (!newChat) return null
-      if (isAuthenticated) {
+
+      // Only update URL for authenticated users
+      // For guest users, just store the chatId in localStorage without changing the URL
+      if (isAuthenticated && typeof window !== "undefined") {
         window.history.pushState(null, "", `/c/${newChat.id}`)
-      } else {
+      } else if (typeof window !== "undefined") {
         localStorage.setItem("guestChatId", newChat.id)
       }
 

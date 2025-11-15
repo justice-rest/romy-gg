@@ -211,7 +211,8 @@ export function Chat() {
     !isSubmitting &&
     status === "ready" &&
     messages.length === 0 &&
-    !hasSentFirstMessageRef.current // Don't redirect if we've already sent a message in this session
+    !hasSentFirstMessageRef.current && // Don't redirect if we've already sent a message in this session
+    initialMessages.length === 0 // Also check initialMessages to avoid race conditions
   ) {
     return redirect("/")
   }
