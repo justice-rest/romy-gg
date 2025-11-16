@@ -10,7 +10,7 @@ export const openrouterModels: ModelConfig[] = [
     modelFamily: "OpenRouter",
     baseProviderId: "deepseek",
     description:
-      "Flagship model by DeepSeek, optimized for performance and reliability.",
+      "Flagship model by DeepSeek, optimized for performance and reliability. Free tier - web search requires OpenRouter credits.",
     tags: ["flagship", "reasoning", "performance", "reliability"],
     contextWindow: 163840,
     inputCost: 0,
@@ -301,7 +301,7 @@ export const openrouterModels: ModelConfig[] = [
     modelFamily: "Llama",
     baseProviderId: "meta",
     description:
-      "Meta's latest model with improved reasoning capabilities and enhanced performance.",
+      "Meta's latest model with improved reasoning capabilities and enhanced performance. Free tier - web search requires OpenRouter credits.",
     tags: ["flagship", "reasoning", "performance", "reliability"],
     contextWindow: 128000,
     inputCost: 0,
@@ -311,7 +311,7 @@ export const openrouterModels: ModelConfig[] = [
     tools: true,
     audio: false,
     reasoning: true,
-    webSearch: true,
+    webSearch: false,
     openSource: false,
     speed: "Fast",
     intelligence: "High",
@@ -320,14 +320,9 @@ export const openrouterModels: ModelConfig[] = [
     modelPage: "https://www.llama.com/",
     releasedAt: "2025-04-01",
     icon: "meta",
-    apiSdk: (apiKey?: string, opts?: { enableSearch?: boolean }) =>
+    apiSdk: (apiKey?: string) =>
       createOpenRouter({
         apiKey: apiKey || process.env.OPENROUTER_API_KEY,
-        ...(opts?.enableSearch && {
-          extraBody: {
-            plugins: [{ id: "web", engine: "exa", max_results: 25 }],
-          },
-        }),
       }).chat("meta-llama/llama-3.3-8b-instruct:free"),
   },
   {

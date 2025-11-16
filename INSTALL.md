@@ -34,9 +34,6 @@ OPENROUTER_API_KEY=your_openrouter_api_key
 # CSRF Protection
 CSRF_SECRET=your_csrf_secret_key
 
-# Exa
-EXA_API_KEY=your_exa_api_key
-
 # Gemini
 GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
 
