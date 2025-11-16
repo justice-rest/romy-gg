@@ -3,38 +3,6 @@ import { ModelConfig } from "../types"
 
 export const openrouterModels: ModelConfig[] = [
   {
-    id: "openrouter:deepseek/deepseek-r1:free",
-    name: "DeepSeek R1",
-    provider: "OpenRouter",
-    providerId: "openrouter",
-    modelFamily: "OpenRouter",
-    baseProviderId: "deepseek",
-    description:
-      "Flagship model by DeepSeek, optimized for performance and reliability. Free tier - web search requires OpenRouter credits.",
-    tags: ["flagship", "reasoning", "performance", "reliability"],
-    contextWindow: 163840,
-    inputCost: 0,
-    outputCost: 0,
-    priceUnit: "per 1M tokens",
-    vision: false,
-    tools: false,
-    audio: false,
-    reasoning: true,
-    webSearch: false,
-    openSource: false,
-    speed: "Medium",
-    intelligence: "High",
-    website: "https://openrouter.ai/",
-    apiDocs: "https://openrouter.ai/deepseek/deepseek-r1:free",
-    modelPage: "https://deepseek.com",
-    releasedAt: "2024-04-01",
-    icon: "deepseek",
-    apiSdk: (apiKey?: string) =>
-      createOpenRouter({
-        apiKey: apiKey || process.env.OPENROUTER_API_KEY,
-      }).chat("deepseek/deepseek-r1:free"),
-  },
-  {
     id: "openrouter:anthropic/claude-sonnet-4",
     name: "Claude Sonnet 4",
     provider: "OpenRouter",

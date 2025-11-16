@@ -1,6 +1,5 @@
 import { FREE_MODELS_IDS } from "../config"
 import { claudeModels } from "./data/claude"
-import { deepseekModels } from "./data/deepseek"
 import { geminiModels } from "./data/gemini"
 import { grokModels } from "./data/grok"
 import { mistralModels } from "./data/mistral"
@@ -14,7 +13,6 @@ import { ModelConfig } from "./types"
 const STATIC_MODELS: ModelConfig[] = [
   ...openaiModels,
   ...mistralModels,
-  ...deepseekModels,
   ...claudeModels,
   ...grokModels,
   ...perplexityModels,
